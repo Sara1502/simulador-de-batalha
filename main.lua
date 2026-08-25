@@ -20,7 +20,8 @@
 ]]
 
 -- Dependencies
-
+local player = require("player.player")
+local colossus = require("colossus.colossus")
 
 -- Habilitar UTF-8 no terminal
 os.execute("chcp 65001")
