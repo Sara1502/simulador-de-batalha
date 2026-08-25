@@ -50,6 +50,7 @@ print([[
 
 
 -- Obter definição do monstro
+local boss = colossus
 
 -- Apresentar monstro
 
