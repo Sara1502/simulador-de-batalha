@@ -20,38 +20,21 @@
 ]]
 
 -- Dependencies
+local utils = require("utils")
 local player = require("player.player")
 local colossus = require("colossus.colossus")
 
 -- Habilitar UTF-8 no terminal
-os.execute("chcp 65001")
-
+utils.enableUtf8()
 
 -- Header
-print([[
-=====================================================================
-               _
-    _         | |
-   | | _______| |---------------------------------------------\
-   |:-)_______|==[]============================================>
-   |_|        | |---------------------------------------------/
-              |_|
-
-                -----------------------------------------
-
-                        ⚔ SIMULADOR DE BATALHA ⚔
-
-=====================================================================
-
-            Você empunha sua espada e se prepara para lutar.
-                            É hora da batalha!
-                        
-]])
+utils.printHeader()
 
 
 -- Obter definição do monstro
 local boss = colossus
 
 -- Apresentar monstro
+utils.printCreature(boss)
 
 -- Loop
