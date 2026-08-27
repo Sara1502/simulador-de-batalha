@@ -29,7 +29,7 @@ function actions.build()
 
                 -- Apresentar resultado com print
                 print(string.format( "%s atacou %s e deu %d pontos de dano", creatureData.name, playerData.name, damage ))
-                local healthRate = math.floor((playerData.haelth / playerData.maxHealth) * 10)
+                local healthRate = math.floor((playerData.health / playerData.maxHealth) * 10)
                 print(string.format( "%s: %s", playerData.name, utils.getProgressBar(healthRate)))
             else
                 print(string.format( "%s tentou atacar, mas errou.", creatureData.name))            
