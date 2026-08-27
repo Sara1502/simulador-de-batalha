@@ -11,7 +11,7 @@ function actions.build()
 
     -- Atacar com espada
     local  swordAttack = {
-        description = {'Atacar com a espada.'},
+        description = 'Atacar com a espada.',
         requirement = nil,
         execute = function (playerData, creatureData)
             -- Definição de chance de sucesso
@@ -24,7 +24,7 @@ function actions.build()
 
             if success then
                 -- Aplicar dano em caso de sucesso
-                creatureData.heath = creatureData.heath - damage
+                creatureData.health = creatureData.heath - damage
 
                 -- Apresentar resultado como print
                 print(string.format( "%s atacou a criatura e deu %d pontos de dano", playerData.name, damage ))
