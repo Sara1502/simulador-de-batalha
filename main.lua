@@ -40,6 +40,9 @@ local bossActions = colossusActions
 -- Apresentar monstro
 utils.printCreature(boss)
 
+-- Apresentar Player
+utils.printPlayer(player)
+
 -- Build actions
 playerActions.build()
 bossActions.build()

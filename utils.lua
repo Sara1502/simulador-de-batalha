@@ -62,6 +62,7 @@ function utils.printCreature(creature)
     
 
     -- Cartão
+    print("| Boss:")
     print("| " .. creature.name)
     print("| ")
     print("| " .. creature.description)
@@ -71,7 +72,32 @@ function utils.printCreature(creature)
     print("|    Ataque:       " .. utils.getProgressBar(creature.attack))
     print("|    Defesa:       " .. utils.getProgressBar(creature.defense))
     print("|    Velocidade:   " .. utils.getProgressBar(creature.speed))
+    print()
+    print('===================================================================')
 end
+
+
+--- 
+--- Faz print das informações do player
+--- @param player table
+--- 
+function utils.printPlayer(player)
+    local healthRate = math.floor((player.health / player.maxHealth) * 10)
+
+    -- Cartão
+    print()
+    print("| Player:")
+    print("| " .. player.name)
+    print("| ")
+    print("| " .. player.description)
+    print("| ")
+    print("| Atributos")
+    print("|    Vida:         " .. utils.getProgressBar(healthRate))
+    print("|    Ataque:       " .. utils.getProgressBar(player.attack))
+    print("|    Defesa:       " .. utils.getProgressBar(player.defense))
+    print("|    Velocidade:   " .. utils.getProgressBar(player.speed))
+end
+
 
 
 --- Pergunta ao Jogador por um número, que é retornado pela função
